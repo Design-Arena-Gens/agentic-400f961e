@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nvidia-green: #76B900;
+  --cyber-dark: #0a0e27;
+  --cyber-darker: #050813;
+  --cyber-blue: #00d4ff;
+  --cyber-purple: #b900ff;
+  --cyber-pink: #ff006e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cyber-darker);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(10, 14, 39, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(118, 185, 0, 0.2);
+  border-radius: 12px;
+}
+
+.glass-strong {
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(118, 185, 0, 0.3);
+  border-radius: 12px;
+}
+
+.neon-border {
+  border: 1px solid var(--nvidia-green);
+  box-shadow: 0 0 10px rgba(118, 185, 0, 0.5);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(118, 185, 0, 0.8);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(10, 14, 39, 0.5);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--nvidia-green);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #8bc927;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
